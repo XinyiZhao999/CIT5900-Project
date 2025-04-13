@@ -1,15 +1,34 @@
-<html lang="en">
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <title>My Visualization</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <h1>CIT5900-Project</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, molestias hic excepturi quis ea dicta temporibus necessitatibus corrupti explicabo unde animi ratione molestiae, optio rem, possimus esse architecto dolorem voluptatum.</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, molestias hic excepturi quis ea dicta temporibus necessitatibus corrupti explicabo unde animi ratione molestiae, optio rem, possimus esse architecto dolorem voluptatum.</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, molestias hic excepturi quis ea dicta temporibus necessitatibus corrupti explicabo unde animi ratione molestiae, optio rem, possimus esse architecto dolorem voluptatum.</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, molestias hic excepturi quis ea dicta temporibus necessitatibus corrupti explicabo unde animi ratione molestiae, optio rem, possimus esse architecto dolorem voluptatum.</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, molestias hic excepturi quis ea dicta temporibus necessitatibus corrupti explicabo unde animi ratione molestiae, optio rem, possimus esse architecto dolorem voluptatum.</p>
+  <h2>Sales Chart</h2>
+  <canvas id="myChart" width="600" height="400"></canvas>
+
+  <script>
+    const ctx = document.getElementById('myChart');
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr'],
+        datasets: [{
+          label: 'Sales',
+          data: [12, 19, 7, 15],
+          backgroundColor: ['#60a5fa', '#34d399', '#facc15', '#f87171']
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          y: { beginAtZero: true }
+        }
+      }
+    });
+  </script>
 </body>
 </html>
+
