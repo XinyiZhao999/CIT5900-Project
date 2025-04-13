@@ -1,12 +1,38 @@
 <!-- index.html -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My Visualization</title>
+  <meta charset="UTF-8">
+  <title>GitHub Pages Visualization Sample</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+      background-color: #f7f7f7;
+    }
+    h2 {
+      color: #333;
+    }
+    img {
+      max-width: 100%;
+      border: 1px solid #ccc;
+      margin-bottom: 2rem;
+    }
+    canvas {
+      max-width: 100%;
+      border: 1px solid #ccc;
+      background: #fff;
+      padding: 1rem;
+    }
+  </style>
 </head>
 <body>
-  <h2>Sales Chart</h2>
+
+  <h2>📸 Example Image</h2>
+  <img src="https://raw.githubusercontent.com/github/explore/main/topics/chartjs/chartjs.png" alt="Sample Image from GitHub" width="600">
+
+  <h2>📊 Interactive Chart (Chart.js)</h2>
   <canvas id="myChart" width="600" height="400"></canvas>
 
   <script>
@@ -29,6 +55,8 @@
       }
     });
   </script>
+
 </body>
 </html>
+
 
