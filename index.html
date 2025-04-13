@@ -1,18 +1,18 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>GitHub Pages Visualization Sample</title>
+  <title>GitHub Pages: Image + Chart + Table</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Arial', sans-serif;
       margin: 2rem;
-      background-color: #f7f7f7;
+      background: #f5f5f5;
     }
     h2 {
       color: #333;
+      margin-top: 2rem;
     }
     img {
       max-width: 100%;
@@ -25,15 +25,62 @@
       background: #fff;
       padding: 1rem;
     }
+    table {
+      width: 80%;
+      border-collapse: collapse;
+      margin-top: 2rem;
+      background: white;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.75rem;
+      text-align: center;
+    }
+    th {
+      background-color: #e2e8f0;
+    }
   </style>
 </head>
 <body>
 
   <h2>📸 Example Image</h2>
-  <img src="https://raw.githubusercontent.com/github/explore/main/topics/chartjs/chartjs.png" alt="Sample Image from GitHub" width="600">
+  <img src="https://raw.githubusercontent.com/github/explore/main/topics/chartjs/chartjs.png" alt="Sample Image" width="600">
 
-  <h2>📊 Interactive Chart (Chart.js)</h2>
+  <h2>📊 Sales Chart (Chart.js)</h2>
   <canvas id="myChart" width="600" height="400"></canvas>
+
+  <h2>📋 Sales Data Table</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Month</th>
+        <th>Sales</th>
+        <th>Growth (%)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>January</td>
+        <td>12</td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td>February</td>
+        <td>19</td>
+        <td>+58%</td>
+      </tr>
+      <tr>
+        <td>March</td>
+        <td>7</td>
+        <td>-63%</td>
+      </tr>
+      <tr>
+        <td>April</td>
+        <td>15</td>
+        <td>+114%</td>
+      </tr>
+    </tbody>
+  </table>
 
   <script>
     const ctx = document.getElementById('myChart');
@@ -57,6 +104,8 @@
   </script>
 
 </body>
+</html>
+
 </html>
 
 
